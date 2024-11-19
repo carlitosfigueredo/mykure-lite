@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/eventos');
+      navigate('/events');
     } catch (error) {
       console.error(error);
       if (error){
