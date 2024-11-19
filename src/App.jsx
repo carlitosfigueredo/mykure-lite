@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import ProtectedRoute from './ProtectedRoute.jsx';
-import Dashboard from './components/Dashboard';
 import Events from './components/Events';
 import { AuthProvider } from './AuthContext.jsx';
 import ProtectedLayout from './components/ProtectedLayout';
