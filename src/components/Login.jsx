@@ -3,6 +3,7 @@ import { TextField, Button, Typography, Container, Box } from '@mui/material';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -12,12 +13,24 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError('');
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/dashboard'); // Redirige a la página protegida después del login
+      navigate('/dashboard');
     } catch (error) {
-      setError(error.message);
+      console.error(error);
+      if (error){
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Credenciales inválidas'
+        })
+      }else{
+        Swal.fire({
+          icon: 'success',
+          title: 'Inicio de sesión exitoso',
+          text: 'Bienvenido a Mykure Lite'
+        });
+      }
     }
   };
 
@@ -30,6 +43,10 @@ function Login() {
         justifyContent="center"
         minHeight="100vh"
       >
+        <Typography variant="h4" component="h2">
+          Mykure Lite
+        </Typography>
+        <img src="/logo.svg" alt="Logo" style={{display:"block",margin:"0",maxWidth:"100%",maxHeight:"300px"}} />
         <Typography variant="h4" component="h1" gutterBottom>
           Iniciar Sesión
         </Typography>
