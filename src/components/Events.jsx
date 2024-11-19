@@ -162,7 +162,7 @@ function Events() {
   };
 
   return (
-    <Box sx={{ padding: { xs: 2, sm: 4 }, width: '100%' }}>
+    <Box sx={{ padding: { xs: 2, sm: 4 }}}>
       <Typography variant="h4" align="center" gutterBottom>
         Lista de Eventos
       </Typography>
