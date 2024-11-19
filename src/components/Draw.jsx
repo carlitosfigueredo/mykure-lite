@@ -172,9 +172,9 @@ function Draw() {
             <Table>
                 <TableHead>
                     <TableRow>
-                        <TableCell>Nombre</TableCell>
-                        <TableCell>Apellido</TableCell>
-                        <TableCell>Cédula</TableCell>
+                        <TableCell sx={{backgroundColor:"primary.main",color:"white"}}>Nombre</TableCell>
+                        <TableCell sx={{backgroundColor:"primary.main",color:"white"}}>Apellido</TableCell>
+                        <TableCell sx={{backgroundColor:"primary.main",color:"white"}}>Cédula</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
