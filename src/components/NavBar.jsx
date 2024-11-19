@@ -21,9 +21,7 @@ function Navbar() {
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const menuItems = [
-        { text: 'Dashboard', path: '/dashboard' },
         { text: 'Eventos', path: '/events' },
-        // Agrega más opciones según necesites
     ];
 
     const toggleDrawer = () => {
